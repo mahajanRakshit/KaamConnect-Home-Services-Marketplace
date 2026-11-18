@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KaamConnect connects households with local home-service professionals.">
+  <title>KaamConnect | Home Services Marketplace</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <a href="index.html" class="logo">Kaam<span>Connect</span></a>
+  <nav><a href="#home">Home</a><a href="#services">Services</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+  <div class="nav-buttons"><a href="login.html?role=customer" class="nav-btn">Customer Login</a><a href="login.html?role=worker" class="nav-btn">Worker Login</a><a href="register.html" class="primary-btn small">Register</a></div>
+</header>
+<main>
+  <section class="hero" id="home"><div class="hero-content"><p class="tagline">YOUR HOME, OUR RESPONSIBILITY</p><h1>Find Trusted Professionals <span>For Every Home Need</span></h1><p>From plumbing to electrical repairs, cleaning to carpentry. Find skilled professionals for everyday household needs.</p><a href="#services" class="primary-btn">Explore Services</a></div><div class="hero-art"><div class="hero-icon">🏠</div><p>Reliable help, closer to home.</p><span>Plumbing · Repairs · Cleaning</span></div></section>
+  <section class="search-section"><h2>What service do you need today?</h2><div class="search-row"><input type="search" id="searchInput" placeholder="Search plumber, electrician, carpenter..." aria-label="Search services"><button class="primary-btn" onclick="searchServices()">Search</button></div></section>
+  <section class="services section" id="services"><div class="section-heading"><p class="eyebrow">WHAT WE OFFER</p><h2>Our Popular Services</h2><p>Professional help for your household needs.</p></div><div class="service-container" id="serviceContainer">
+    <article class="service-card" data-name="plumbing plumber"><div class="service-emoji">🚰</div><h3>Plumbing</h3><p>Leakage, pipe repair, taps and bathroom fittings.</p><button onclick="bookService('Plumbing')">Book Now</button></article>
+    <article class="service-card" data-name="carpenter carpentry"><div class="service-emoji">🪚</div><h3>Carpenter</h3><p>Furniture repair, doors, cabinets and fittings.</p><button onclick="bookService('Carpenter')">Book Now</button></article>
+    <article class="service-card" data-name="electrician electrical"><div class="service-emoji">💡</div><h3>Electrician</h3><p>Wiring, fans, lights and electrical repairs.</p><button onclick="bookService('Electrician')">Book Now</button></article>
+    <article class="service-card" data-name="mechanic vehicle"><div class="service-emoji">🛠️</div><h3>Mechanic</h3><p>Vehicle repair, maintenance and inspection.</p><button onclick="bookService('Mechanic')">Book Now</button></article>
+    <article class="service-card" data-name="housekeeping cleaning cleaner"><div class="service-emoji">🧹</div><h3>Housekeeping</h3><p>Home cleaning, kitchen cleaning and dusting.</p><button onclick="bookService('Housekeeping')">Book Now</button></article>
+    <article class="service-card" data-name="handyman repairs maintenance"><div class="service-emoji">🔧</div><h3>General Handyman</h3><p>Small repairs and household maintenance.</p><button onclick="bookService('General Handyman')">Book Now</button></article>
+  </div><p id="noResults" class="muted" hidden>No matching service found. Try another keyword.</p></section>
+  <section class="how-it-works section" id="how"><div class="section-heading"><p class="eyebrow">SIMPLE PROCESS</p><h2>How KaamConnect Works</h2></div><div class="steps"><article><b>01</b><h3>Choose a Service</h3><p>Select the service you need.</p></article><article><b>02</b><h3>Book a Professional</h3><p>Enter your details and preferred date.</p></article><article><b>03</b><h3>Get Your Work Done</h3><p>Coordinate with a professional to complete the job.</p></article></div></section>
+  <section class="booking section" id="booking"><div class="section-heading"><p class="eyebrow">GET STARTED</p><h2>Book a Service</h2><p>Submit a request. Your demo booking will be saved in this browser.</p></div>
+    <form id="bookingForm" class="form-card"><div class="form-grid"><label>Your Name<input type="text" id="customerName" required maxlength="70" placeholder="Enter your name"></label><label>Phone Number<input type="tel" id="customerPhone" pattern="[0-9]{10}" maxlength="10" required placeholder="10-digit mobile number"></label><label>Select Service<select id="selectedService" required><option value="">Choose a service</option><option>Plumbing</option><option>Carpenter</option><option>Electrician</option><option>Mechanic</option><option>Housekeeping</option><option>General Handyman</option></select></label><label>Preferred Date<input type="date" id="bookingDate" required></label><label class="full">Service Address<textarea id="customerAddress" rows="2" required placeholder="Enter the service address"></textarea></label><label class="full">Describe Your Problem<textarea id="problem" rows="3" required placeholder="Briefly describe the work required"></textarea></label></div><button type="submit" class="primary-btn">Submit Booking</button><p id="bookingMessage" role="status"></p></form>
+  </section>
+  <section id="contact" class="contact section"><p class="eyebrow">WE ARE HERE TO HELP</p><h2>Need Help?</h2><p>KaamConnect connects customers with skilled professionals.</p><p>Demo contact: support@kaamconnect.example</p></section>
+</main>
+<footer><a href="index.html" class="logo">Kaam<span>Connect</span></a><p>Connecting Skilled Workers With Every Home.</p><small>© 2026 KaamConnect. Portfolio demonstration project.</small></footer>
+<script src="js/app.js"></script>
+</body></html>

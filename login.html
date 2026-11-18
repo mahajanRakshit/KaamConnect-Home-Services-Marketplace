@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login | KaamConnect</title><link rel="stylesheet" href="css/style.css"></head><body class="auth-page">
+<header class="navbar"><a href="index.html" class="logo">Kaam<span>Connect</span></a><a href="index.html" class="nav-btn">Back to Home</a></header>
+<main class="auth-wrap"><form id="loginForm" class="form-card auth-card"><p class="eyebrow">WELCOME BACK</p><h1>Login to KaamConnect</h1><p class="muted">Use a demo account created on this browser.</p>
+<label>Login As<select id="role" required><option value="customer">Customer</option><option value="worker">Service Worker</option></select></label>
+<label>Email Address<input type="email" id="email" required placeholder="you@example.com"></label><label>Password<input type="password" id="password" required minlength="6" placeholder="At least 6 characters"></label>
+<button class="primary-btn" type="submit">Login</button><p id="loginMessage" role="status"></p><p class="login-link">Don't have an account? <a href="register.html">Register here</a></p></form></main><script src="js/auth.js"></script></body></html>
